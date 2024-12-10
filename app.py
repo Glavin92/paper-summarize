@@ -11,6 +11,7 @@ def fetch_author_url(name):
     # Replace spaces with '+' for URL encoding
     url = f'https://dblp.org/search/author/api?q={name.replace(" ", "+")}&format=json'
     response = requests.get(url)
+    print(response)
     
     if response.status_code != 200:
         return None  # Handle API failure
