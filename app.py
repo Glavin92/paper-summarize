@@ -142,7 +142,3 @@ def search():
     print(f'Time taken: {end - start} seconds')
     
     return render_template('index.html', faculty_publications={author_name: publications})
-
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
